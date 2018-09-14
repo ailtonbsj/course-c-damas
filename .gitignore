@@ -2,3 +2,6 @@
 !*.c
 !*.dat
 !.gitignore
+!multifiles-and-extern/
+multifiles-and-extern/*
+!multifiles-and-extern/*.c
