@@ -145,25 +145,15 @@ void multiplicarMatrizes() {
     obterEDesenharMatriz(linA, colA, matrizA, "A");
     obterLinsECols(&linB, &colB, "B");
     if( colA == linB ){
-
         obterEDesenharMatriz(linB, colB, matrizB, "B");
         for(j = 0; j < linA; j++){
             printf(" │ ");
             for(i = 0; i < colB; i++){
-
                 int res = 0;
-
                 for(k = 0; k < colA; k++){
-                    printf("+%d*%d",matrizA[j*colA + k], matrizB[k*colB + i]);
                     res += (matrizA[j*colA + k] * matrizB[k*colB + i]);
                 }
-                printf("  ->  ");
-                //printf("%2d (%d,%d)    ",res,i, j*colA);
                 matrizC[j*colB + i] = res;
-                
-                // matrizC[j*linA + i] = (operador == '+') ?
-                // matrizA[j*linA + i] + matrizB[j*linA + i]:
-                // matrizA[j*linA + i] - matrizB[j*linA + i];
             }
             printf(" │\n");
         }
